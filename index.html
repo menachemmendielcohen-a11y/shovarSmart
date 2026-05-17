@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת שוברים חכמה</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="topbar">
+
+        <div class="logo">
+            מערכת שוברים חכמה
+        </div>
+
+        <a href="login.html" class="manage-btn">
+            ניהול
+        </a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="video-box">
+
+            <video
+                id="mainVideo"
+                autoplay
+                muted
+                playsinline>
+            </video>
+
+        </div>
+
+        <div class="students-box">
+
+            <h2 class="students-title">
+                מצב שוברים
+            </h2>
+
+            <div class="students-list-wrap">
+
+                <div
+                    class="students-list students-scroll"
+                    id="studentsList">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="news-bar">
+
+        <div class="news-track" id="newsTrack"></div>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

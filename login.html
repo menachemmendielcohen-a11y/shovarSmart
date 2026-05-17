@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כניסת ניהול</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="background"></div>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1 class="login-title">כניסת ניהול</h1>
+
+            <p class="login-subtitle">
+                הכנס סיסמת מנהל
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                class="login-input"
+                placeholder="סיסמה"
+            >
+
+            <button class="login-button" onclick="login()">
+                כניסה לניהול
+            </button>
+
+            <div id="errorMessage" class="error-message"></div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="login.js"></script>
+
+</body>
+
+</html>

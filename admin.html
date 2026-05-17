@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פאנל ניהול</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-body">
+
+    <div class="background"></div>
+
+    <div class="admin-page">
+
+        <div class="admin-topbar">
+            <h1>פאנל ניהול</h1>
+
+            <button class="logout-btn" onclick="logout()">
+                התנתקות
+            </button>
+        </div>
+
+        <div class="admin-grid">
+
+            <div class="admin-card">
+                <h2>הוספת תלמיד</h2>
+
+                <input type="text" id="studentName" class="admin-input" placeholder="שם תלמיד">
+
+                <button class="admin-button" onclick="addStudent()">
+                    הוסף תלמיד
+                </button>
+            </div>
+
+            <div class="admin-card">
+                <h2>הוספת חדשות</h2>
+
+                <input type="text" id="newsInput" class="admin-input" placeholder="כתוב הודעה">
+
+                <button class="admin-button" onclick="addNews()">
+                    הוסף הודעה
+                </button>
+            </div>
+
+            <div class="admin-card">
+                <h2>הוספת סרטון</h2>
+
+                <input type="text" id="videoUrl" class="admin-input" placeholder="קישור YouTube / Google Drive">
+
+                <input type="number" id="videoDuration" class="admin-input" placeholder="זמן לתצוגה בשניות, בעיקר ל־Drive" min="10" value="60">
+
+                <div class="video-admin-buttons">
+                    <button class="admin-button" onclick="saveYoutubeVideo()">
+                        שמור כ־YouTube
+                    </button>
+
+                    <button class="admin-button" onclick="saveDriveVideo()">
+                        שמור כ־Google Drive
+                    </button>
+                </div>
+
+                <p class="admin-help">
+                    אפשר להוסיף כמה סרטונים. במסך הראשי הם יתנגנו אחד אחרי השני בלופ.
+                    ב־Drive חובה: Share → Anyone with the link → Viewer.
+                </p>
+            </div>
+
+            <div class="admin-card">
+                <h2>שינוי סיסמה</h2>
+
+                <input type="password" id="newPassword" class="admin-input" placeholder="סיסמה חדשה">
+
+                <button class="admin-button" onclick="changePassword()">
+                    שמור סיסמה
+                </button>
+
+                <p class="admin-help">
+                    כרגע הסיסמה נשמרת רק במחשב שבו שינית אותה.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="admin-section-title">תלמידים</h2>
+        <div class="students-admin-list" id="studentsAdminList"></div>
+
+        <h2 class="admin-section-title">חדשות</h2>
+        <div class="news-admin-list" id="newsAdminList"></div>
+
+        <h2 class="admin-section-title">סרטונים / קישורים</h2>
+        <div class="videos-admin-list" id="videosAdminList"></div>
+
+    </div>
+
+    <script type="module" src="admin.js"></script>
+
+</body>
+
+</html>
